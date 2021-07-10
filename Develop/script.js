@@ -26,10 +26,15 @@ for (let i = 0; i < 60; i++) {
 
 
 // Click button to submit the input data by user
-
+var userInput = localStorage.getItem("text");
+var input = $('#text').val();
+console.log(userInput)
+console.log(input)
+$('#text').val();
 
 $("#showInput").click(function() {
-    let input = document.getElementById("showInput").value
-    $(this).text(input);
-    console.log()
+    let input = document.getElementById("text").value
+    console.log(input)
+    localStorage.setItem("text", input);
+
   });
